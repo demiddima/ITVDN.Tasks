@@ -1,0 +1,36 @@
+﻿
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<body>
+    <nav>
+        <a href="/Home/Main">Главная</a>
+        <a href="/Home/Page1">Страница 1</a>
+        <a href="/Home/Page2">Страница 2</a>
+    </nav>
+    <div>
+        @RenderBody()
+    </div>
+    <br />
+    @if (IsSectionDefined("Optional"))
+    {
+        @RenderSection("Optional")
+    }
+    else
+    {
+        <footer>
+            Создание пользовательского интерфейса в ASP.NET Core
+        </footer>
+    }
+    @Html.Partial("_DataTimePartial")
+</body>
+</html>
+

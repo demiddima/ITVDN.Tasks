@@ -1,0 +1,18 @@
+﻿@using Lesson6Task1.Components
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <header>Результат работы компонентов представления</header>
+    <h2>Список продуктов</h2>
+    <p>
+        @await Component.InvokeAsync(nameof(Cart))
+    </p>
+
+</body>
+</html>

@@ -24,15 +24,9 @@ namespace SimpleApp
             {
                 routes.MapRoute(
                     name: "Default",
-                    template: "{controller}/{action}/{id?}");
+                    template: "{controller=products}/{action=list}/{id?}");
             });
 
-            // {id?} - данный фрагмент шаблона описывает не обязательный сегмент в адресе запроса.
-            // При этом в контроллерах по имени id можно будет получить информацию, которая пришла в запросе
-            // Products/Details/10
-            // {controller} = Products
-            // {action} = Details
-            // {id} = 10
         }
     }
 }

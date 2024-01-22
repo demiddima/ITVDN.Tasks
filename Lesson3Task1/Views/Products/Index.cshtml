@@ -1,0 +1,27 @@
+﻿@model Lesson3Task1.Models.ProductRepo
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>Products list</h1>
+    <table>
+        @foreach(var product in Model.collection)
+        {
+            <tr>
+                <td>@product.Id</td>
+                <td>@product.Name</td>
+                <td>@product.Price</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>

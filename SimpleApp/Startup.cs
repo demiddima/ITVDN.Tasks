@@ -24,7 +24,7 @@ namespace SimpleApp
             {
                 routes.MapRoute(
                     name: "Default",
-                    template: "{controller=products}/{action=list}/{id?}");
+                    template: "{controller=products}/{action=list}/{category?}");
             });
 
         }

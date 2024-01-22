@@ -1,7 +1,8 @@
-﻿1, Mobile Phone, 600, Описание Mobile Phone, 52
-2, Laptop, 3200, Описание Laptop, 21
-3, Keyboard, 35, Описание Keyboard, 37
-4, Mouse, 10, Описание Mouse, 78
-5, Pen, 1, Описание Pen, 230
-6, Notebook, 1, Описание Notebook, 148
-7, Ruler, 1, Описание Ruler, 0
+﻿1, Mobile Phone, 600, Описание Mobile Phone, 52, t1
+2, Laptop, 3200, Описание Laptop, 21, t2
+3, Keyboard, 35, Описание Keyboard, 37, t2
+4, Mouse, 10, Описание Mouse, 78, t2
+5, Pen, 1, Описание Pen, 230, o1
+6, Notebook, 1, Описание Notebook, 148, o1
+7, Ruler, 1, Описание Ruler, 0, o1
+8, PC, 3500, Описание PC, 12, t2

@@ -9,22 +9,24 @@ namespace SimpleApp.Controllers
     {
         private ProductReader reader;
 
-        // ВНИМАНИЕ.
-        // Каждый запрос обрабатывает новый экземпляр контроллера.
-        // Конструктор будет вызываться перед вызовом метода List и метода Details
-        // После обработки запроса, экземпляр контроллера будет удален из памяти
         public ProductsController()
         {
             reader = new ProductReader();
         }
 
         // Products/List
-        public IActionResult List()
+        public IActionResult List(string category)
         {
             List<Product> products = reader.ReadFromFile();
-            // Возврат представления List и передача представлению модели в виде коллекции products
-            // Получить доступ к коллекции в представлении можно будет через свойство представления Model
-            return View(products);
+
+            if (category == null)
+            {
+                return View(products);
+            }
+
+            List<Product> categoryCollection = products.Where(x => x.Category == category).ToList();
+
+            return View(categoryCollection);
         }
 
         // Products/Details/1
@@ -35,8 +37,6 @@ namespace SimpleApp.Controllers
 
             if (product != null)
             {
-                // Возврат представления с именем Details и передача представлению экземпляра product
-                // В представление доступ к экземпляру можно получить через свойство представления Model
                 return View(product);
             }
             else

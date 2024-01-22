@@ -3,6 +3,7 @@ using SimpleApp.Models;
 using System.Collections.Generic;
 using System.Linq;
 
+
 namespace SimpleApp.Controllers
 {
     public class ProductsController : Controller
@@ -14,8 +15,14 @@ namespace SimpleApp.Controllers
             reader = new ProductReader();
         }
 
-        // Products/List
-        public IActionResult List(string category)
+        public IActionResult File()
+        {
+            byte[] fileContent = System.IO.File.ReadAllBytes("App_Data/data.txt");
+            return File(fileContent,"application/text","data.txt");
+        }
+
+            // Products/List
+            public IActionResult List(string category)
         {
             List<Product> products = reader.ReadFromFile();
 

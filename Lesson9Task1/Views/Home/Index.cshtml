@@ -1,0 +1,44 @@
+﻿<!-- Index.cshtml -->
+@model IEnumerable<string>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <style>
+        /* CSS-стили для классов */
+        .my-bordered-div {
+            border: 3px solid;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .my-border-red {
+            border-color: red;
+        }
+
+        .my-border-green {
+            border-color: green;
+        }
+
+        .my-border-blue {
+            border-color: blue;
+        }
+    </style>
+</head>
+<body>
+    @foreach (var color in Model)
+    {
+        <div my-border-color="@color">
+            <p>This is a colored div with border</p>
+        </div>
+    }
+</body>
+</html>
+

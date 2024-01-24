@@ -19,9 +19,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson7Task1", "Lesson7Task
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson8Task1", "Lesson8Task1\Lesson8Task1.csproj", "{B9EAB737-3A4C-44E5-B28E-7E255261BA4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson9Task1", "Lesson9Task1\Lesson9Task1.csproj", "{77562D08-FA24-4D37-87C5-A8BA893D225C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson9Task1", "Lesson9Task1\Lesson9Task1.csproj", "{77562D08-FA24-4D37-87C5-A8BA893D225C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson10Task1", "Lesson10Task1\Lesson10Task1.csproj", "{740BB073-476A-404E-BCA9-9A19AD6BF9E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson10Task1", "Lesson10Task1\Lesson10Task1.csproj", "{740BB073-476A-404E-BCA9-9A19AD6BF9E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniAppAspNetMVC", "MiniAppAspNetMVC\MiniAppAspNetMVC.csproj", "{C47DB488-BE93-44A4-A84A-BA522245B835}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{740BB073-476A-404E-BCA9-9A19AD6BF9E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{740BB073-476A-404E-BCA9-9A19AD6BF9E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{740BB073-476A-404E-BCA9-9A19AD6BF9E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C47DB488-BE93-44A4-A84A-BA522245B835}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C47DB488-BE93-44A4-A84A-BA522245B835}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C47DB488-BE93-44A4-A84A-BA522245B835}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C47DB488-BE93-44A4-A84A-BA522245B835}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

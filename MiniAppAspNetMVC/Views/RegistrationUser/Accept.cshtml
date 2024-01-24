@@ -1,0 +1,19 @@
+﻿@model UserRegistration;
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Accept</title>
+    <link href="~/css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>Успешная регистрация</h1>
+    <h2>@Model.Name, спасибо за регистрацию!</h2>
+    <a asp-controller="Home" asp-action="HomePage">Вернуться на домашнюю страницу</a>
+</body>
+</html>

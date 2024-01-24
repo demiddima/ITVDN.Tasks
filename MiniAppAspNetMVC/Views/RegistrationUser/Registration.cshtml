@@ -1,0 +1,29 @@
+﻿@model UserRegistration
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Registration</title>
+    <link href="~/css/style.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="reg-form">
+        @using(Html.BeginForm())
+        {
+            <p>Имя: @Html.TextBoxFor(x => x.Name)</p>
+            <p>Emai;: @Html.TextBoxFor(x => x.Email)</p>
+            <p>Пароль: @Html.PasswordFor(x => x.Password)</p>
+            <p>Подтверждение пароля: @Html.PasswordFor(x => x.ConfirmPassword)</p>
+            <p>Возраст: @Html.TextBoxFor(x => x.Age)</p>
+            @:Согласны ли вы с условиями соглашения нашего сайта
+            <p>Соглнасны? @Html.CheckBoxFor(x => x.isAgree)</p>
+            <input type="submit" value="Регистрация"/>
+        }
+    </div>
+</body>
+</html>

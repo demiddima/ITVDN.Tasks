@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewData["Title"] = "_Layout";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/style.css" rel="stylesheet" />
+    <link href="~/css/menustyle.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="menu-list">
+        <ul class="menu">
+            <li><a asp-controller="Home" asp-action="HomePage">Главная</a></li>
+            <li><a asp-controller="RegistrationUser" asp-action="Registration">Регистрация</a></li>
+            <li><a asp-controller="About" asp-action="Abouts">О нас</a></li>
+            <li><a asp-controller="Contacts" asp-action="Contact">Контакты</a></li>
+        </ul>
+    </div>
+
+    <div class="main">
+        @RenderBody()
+    </div>
+
+    <footer>
+        Это моя первая нормальная страничка
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>
+

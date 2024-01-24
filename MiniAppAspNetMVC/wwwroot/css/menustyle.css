@@ -1,0 +1,23 @@
+﻿.menu{
+    list-style-type: none;
+    padding-left:0;
+    margin-left:0;
+}
+
+.menu a{
+    text-decoration: none;
+    font-family: sans-serif;
+    color: brown;
+    display: inline-block;
+    padding: 10px 40px;
+    background-color: beige;
+    border-bottom: 5px solid;
+}
+
+.menu li{
+    float: left;
+}
+
+.menu a:hover{
+    background-color: chocolate
+}

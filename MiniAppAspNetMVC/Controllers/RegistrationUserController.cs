@@ -14,15 +14,24 @@ namespace MiniAppAspNetMVC.Controllers
         [HttpPost]
         public IActionResult Registration(UserRegistration user)
         {
-            if(user != null && user.isAgree != false)
+            if(ModelState.IsValid)
             {
-                //add db
-                return View("Accept", user);
+                if (user != null && user.isAgree != false)
+                {
+                    //add db
+                    return View("Accept", user);
+                }
+                else
+                {
+                    return NotFound();
+                }
             }
             else
             {
-                return NotFound();
+                return View(user);
             }
+
+            
            
         }
 

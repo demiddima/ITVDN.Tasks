@@ -1,7 +1,5 @@
 ﻿@model UserRegistration
-@{
-    Layout = null;
-}
+
 
 <!DOCTYPE html>
 
@@ -9,21 +7,40 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Registration</title>
-    <link href="~/css/style.css" rel="stylesheet"/>
 </head>
 <body>
     <div class="reg-form">
-        @using(Html.BeginForm())
-        {
-            <p>Имя: @Html.TextBoxFor(x => x.Name)</p>
-            <p>Emai;: @Html.TextBoxFor(x => x.Email)</p>
-            <p>Пароль: @Html.PasswordFor(x => x.Password)</p>
-            <p>Подтверждение пароля: @Html.PasswordFor(x => x.ConfirmPassword)</p>
-            <p>Возраст: @Html.TextBoxFor(x => x.Age)</p>
-            @:Согласны ли вы с условиями соглашения нашего сайта
-            <p>Соглнасны? @Html.CheckBoxFor(x => x.isAgree)</p>
-            <input type="submit" value="Регистрация"/>
-        }
+        <form asp-controller="RegistrationUser" asp-action="Registration" method="post">
+            <label asp-for="Name" ></label>
+            <input asp-for="Name" />
+            <span asp-validation-for="Name"></span>
+            <br />
+
+            <label asp-for="Email"></label>
+            <input asp-for="Email"/>
+            <span asp-validation-for="Email"></span>
+            <br />
+
+            <label asp-for="Age"></label>
+            <input asp-for="Age" />
+            <span asp-validation-for="Age"></span>
+            <br />
+
+            <label asp-for="Password"></label>
+            <input asp-for="Password"/>
+            <span asp-validation-for="Password"></span>
+
+            <br />
+            <label asp-for="ConfirmPassword"></label>
+            <input asp-for="ConfirmPassword"/>
+            <span asp-validation-for="ConfirmPassword" ></span>
+            <br />
+            <label asp-for="isAgree"></label>
+            <input asp-for="isAgree" />
+            <span asp-validation-for="isAgree"></span>
+            <br />
+            <input type="submit" value="Создать учетную запись" class="btn-reg" />
+        </form>
     </div>
 </body>
 </html>

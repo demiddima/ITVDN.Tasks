@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MiniAppAspNetMVC.Context;
 using MiniAppAspNetMVC.Models;
 
 namespace MiniAppAspNetMVC.Controllers
@@ -14,25 +15,30 @@ namespace MiniAppAspNetMVC.Controllers
         [HttpPost]
         public IActionResult Registration(UserRegistration user)
         {
-            if(ModelState.IsValid)
+            using (DbUser db = new DbUser())
             {
-                if (user != null && user.isAgree != false)
+                if (ModelState.IsValid)
                 {
-                    //add db
-                    return View("Accept", user);
+                    if (user != null && user.isAgree != false)
+                    {
+                        db.InfoUsers.Add(user);
+                        db.SaveChanges();
+                        return View("Accept", user);
+                    }
+                    else
+                    { 
+                        return NotFound();
+                    }
                 }
                 else
                 {
-                    return NotFound();
+                    return View(user);
                 }
-            }
-            else
-            {
-                return View(user);
+
             }
 
-            
-           
+
+
         }
 
         public IActionResult Accept()

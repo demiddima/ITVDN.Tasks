@@ -1,7 +1,20 @@
-﻿
+﻿@model List<UserRegistration>
+
 @{
     ViewData["Title"] = "Contact";
 }
 
-<h1>Contact</h1>
+<h1>Юзеры</h1>
+
+    @foreach (var item in Model)
+    {
+        <ul>
+        <li>@item.Name</li>
+        <li>@item.Email</li>
+        <li>@item.Age</li>
+        </ul>
+    }
+
+
+
 
